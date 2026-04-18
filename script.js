@@ -28,11 +28,14 @@ const getBook = function () {
         const book = data[i];
         const formattedTitle = book.title.replace(" (", "<br>(");
         row.innerHTML += `<div class="col-12 col-md-6 col-lg-3">
-      <div class="card h-100 text-warning-emphasis">
-            <div class="card-body d-flex flex-column">
-            <img src="${book.img}" alt="book cover" class="img-fluid" style="height: 400px; object-fit: cover">
+      <div class="card h-100 text-warning-emphasis border-0">
+            <div class="card-body d-flex flex-column p-0">
+           <img src="${book.img}" 
+          alt="cover" 
+          class="card-img-top rounded-top" 
+  style="width: 100%; aspect-ratio: 3 / 4;">
               <h5 class="card-title mt-3 fs-5 flex-grow-1 d-flex align-items-center justify-content-center text-center">${formattedTitle}</h5>
-              <p class="card-text text-end mt-auto">
+              <p class="card-text text-end mt-auto pe-2 pb-2">
             ${book.price}&euro;
               </p>
             </div>
